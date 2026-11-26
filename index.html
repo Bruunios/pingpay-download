@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Baixe o PingPay para Android.">
+  <meta name="theme-color" content="#1CADF2">
+  <title>Baixar PingPay</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root {
+      --azul: #1CADF2;
+      --azul-escuro: #0E86C4;
+      --fundo: #F7F8FC;
+      --cartao: #FFFFFF;
+      --texto: #3C3C3C;
+      --texto-2: #77808C;
+      --borda: #E2E4EA;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --fundo: #121417; --cartao: #1C1F24; --texto: #ECEDEF; --texto-2: #9AA1AC; --borda: #2C3038;
+      }
+    }
+    :root[data-theme="dark"] {
+      --fundo: #121417; --cartao: #1C1F24; --texto: #ECEDEF; --texto-2: #9AA1AC; --borda: #2C3038;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; background: var(--fundo); color: var(--texto);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    header {
+      width: 100%; background: var(--azul); color: #fff; text-align: center;
+      padding: 40px 16px 72px;
+    }
+    header img { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+    header h1 { margin: 16px 0 4px; font-size: 32px; letter-spacing: -.5px; }
+    header p { margin: 0; opacity: .9; }
+    main { width: 100%; max-width: 480px; padding: 0 16px 40px; margin-top: -48px; }
+    .cartao {
+      background: var(--cartao); border: 1px solid var(--borda); border-radius: 20px;
+      padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,.06);
+    }
+    .baixar {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; padding: 16px; border-radius: 14px; text-decoration: none;
+      background: var(--azul); color: #fff; font-weight: 700; font-size: 18px;
+      box-shadow: 0 4px 0 var(--azul-escuro);
+    }
+    .baixar:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--azul-escuro); }
+    .info { text-align: center; color: var(--texto-2); font-size: 14px; margin: 12px 0 0; }
+    h2 { font-size: 17px; margin: 28px 0 12px; }
+    ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 10px; line-height: 1.45; }
+    .aviso { margin-top: 20px; padding: 14px; border-radius: 12px; background: rgba(28,173,242,.1); font-size: 14px; line-height: 1.45; }
+    footer { color: var(--texto-2); font-size: 13px; padding: 0 16px 24px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpeg" alt="Logo do PingPay">
+    <h1>PingPay</h1>
+    <p>Seus boletos e vencimentos em um só lugar</p>
+  </header>
+
+  <main>
+    <div class="cartao">
+      <a class="baixar" href="PingPay.apk" download="PingPay.apk">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/>
+        </svg>
+        Baixar para Android
+      </a>
+      <p class="info">Arquivo APK · 72 MB · Android 7 ou mais novo</p>
+
+      <h2>Como instalar</h2>
+      <ol>
+        <li>Toque em <strong>Baixar para Android</strong> e espere o download terminar.</li>
+        <li>Abra o arquivo <strong>PingPay.apk</strong> pela notificação ou pelo app <strong>Arquivos</strong>.</li>
+        <li>Se o Android pedir, permita <strong>instalar apps desta fonte</strong> e volte.</li>
+        <li>Toque em <strong>Instalar</strong>. Se o Play Protect avisar que o app é desconhecido, toque em <strong>Instalar mesmo assim</strong>.</li>
+      </ol>
+
+      <div class="aviso">
+        O aviso do Play Protect aparece porque o app não veio da Play Store. É um projeto
+        acadêmico e não pede nada além da câmera (para ler códigos de barras) e das notificações
+        (para lembrar dos vencimentos).
+      </div>
+    </div>
+  </main>
+
+  <footer>PingPay · projeto acadêmico</footer>
+</body>
+</html>
